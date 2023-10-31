@@ -52,7 +52,7 @@ function Assessment() {
 
   return (
     <>
-      <SumReq reqFunc={sendValues} sumValues={sumValues} result={result}></SumReq>
+      <SumReq sendValues={sendValues} sumValues={sumValues} result={result}></SumReq>
       <Table info={info}></Table>
     </>
   );
