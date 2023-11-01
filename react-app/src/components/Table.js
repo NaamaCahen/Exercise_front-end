@@ -1,34 +1,35 @@
 import React from "react";
 import { dateFormat, slice_name } from "../Utils"; 
+import { Tr,Td,TableC,Th } from "../Style";
 
 function Table(props){
     return(
-        <table>
-        <tr>
-          <th>Number</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Value</th>
-          <th>Day</th>
-        </tr>
+        <TableC>
+        <Tr>
+          <Th>Number</Th>
+          <Th>First Name</Th>
+          <Th>Last Name</Th>
+          <Th>Value</Th>
+          <Th>Day</Th>
+        </Tr>
         {props.info.data
           ? props.info.data.map((item, i) => {
               return (
-                <tr key={i}>
-                  <td>{i + 1}</td>
-                  <td>
+                <Tr key={i}>
+                  <Td>{i + 1}</Td>
+                  <Td>
                     {slice_name(item.first_name,'first')}
-                  </td>
-                  <td>
+                  </Td>
+                  <Td>
                     {slice_name(item.last_name,'last')}
-                  </td>
-                  <td>{item.value}</td>
-                  <td>{dateFormat(item.date)}</td>
-                </tr>
+                  </Td>
+                  <Td>{item.value}</Td>
+                  <Td>{dateFormat(item.date)}</Td>
+                </Tr>
               );
             })
           : null}
-      </table>
+      </TableC>
     )
 }
 

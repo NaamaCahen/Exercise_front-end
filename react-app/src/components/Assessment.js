@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SumReq from "./SumReq";
 import Table from "./Table";
+import { Title } from "../Style";
 
 function Assessment() {
   const [info, setInfo] = useState({ session_number: null, data: null });
@@ -52,6 +53,7 @@ function Assessment() {
 
   return (
     <>
+      <Title>Home Assessment</Title>
       <SumReq sendValues={sendValues} sumValues={sumValues} result={result}></SumReq>
       <Table info={info}></Table>
     </>

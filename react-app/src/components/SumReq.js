@@ -1,13 +1,14 @@
 import React, { useState } from "react";
+import { Button, Div, Input, SumP } from "../Style";
 
 function SumReq(props){
     
     return(
-       <div>
-        <p>sum of values:{props.sumValues}</p>
-        <button onClick={props.sendValues}>send POST request</button>
-        <input type="text" value={props.result}></input>
-       </div>
+       <Div>
+        <SumP>sum of values: {props.sumValues}</SumP>
+        <Button onClick={props.sendValues}>send POST request</Button>
+        <Input type="text" placeholder="result" value={props.result}></Input>
+       </Div>
     )
 
 }
